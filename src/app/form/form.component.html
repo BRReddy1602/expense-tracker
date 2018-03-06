@@ -1,0 +1,5 @@
+<app-label [label]="data.label"></app-label>
+<!--<app-label *ngFor="let value of data.length" [label]="value"></app-label>-->
+<app-value [(value)]="data.price" (outputEvents)="data.price = $event"></app-value>
+<pre>{{data | json}}</pre>
+{{data.price}}
