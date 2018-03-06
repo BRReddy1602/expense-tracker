@@ -1,5 +1,25 @@
-<app-label [label]="data.label"></app-label>
-<!--<app-label *ngFor="let value of data.length" [label]="value"></app-label>-->
-<app-value [(value)]="data.price" (outputEvents)="data.price = $event"></app-value>
-<pre>{{data | json}}</pre>
-{{data.price}}
+<!-- <div *ngFor="let field of fields">
+  <div class="row" [ngIf]="!field.hide">
+    <div class="col-xs-3">
+      <app-label [label]="field.description"></app-label>
+    </div>
+    <div class="col-xs-3">
+      <app-value [(value)]="data.field" (outputEvents)="data.field = $event"></app-value>
+    </div>
+  </div>
+</div> -->
+<div class="row">
+  <ng-template ngFor let-field [ngForOf]="fields" let-i="index">
+    <div class='inline-block col-xs-6' *ngIf="!field.hide">
+      <div class="col-xs-6 text-right">
+        <app-label [label]="field.description"></app-label>
+      </div>
+      <div class="col-xs-6">
+        <app-form-element [(value)]="data[field.field]" [field]="field" (outputEvents)="data[field.field] = $event">
+        </app-form-element>
+      </div>
+    </div>
+  </ng-template>
+</div>
+
+<pre><h6>Form level</h6>{{data | json}}</pre>

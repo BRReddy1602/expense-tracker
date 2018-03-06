@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { LabelComponent } from './label/label.component';
 import { FormComponent } from './form/form.component';
 import { ValueComponent } from './value/value.component';
+import { TextComponent } from './text/text.component';
+import { DateComponent } from './date/date.component';
+import { FormElementComponent } from './form-element/form-element.component';
 
 
 @NgModule({
@@ -13,7 +16,10 @@ import { ValueComponent } from './value/value.component';
     AppComponent,
     LabelComponent,
     FormComponent,
-    ValueComponent
+    ValueComponent,
+    TextComponent,
+    DateComponent,
+    FormElementComponent
   ],
   imports: [
     BrowserModule,

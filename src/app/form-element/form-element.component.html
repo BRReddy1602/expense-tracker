@@ -1,0 +1,17 @@
+<div [ngSwitch]="field.element">
+  <span *ngSwitchCase="'number'">
+    <app-value [(value)]="value" (outputEvents)="value = $event"></app-value>
+  </span>
+  <span *ngSwitchCase="'date'">
+    <app-date [(value)]="value" (outputEvents)="value = $event"></app-date>
+  </span>
+  <span *ngSwitchCase="'dropdown'">
+    <!-- <app-dropdown [(value)]="value" (outputEvents)="data[field.field] = $event"></app-dropdown> -->
+  </span>
+  <span *ngSwitchCase="'image'">
+    <img />
+  </span>
+  <span *ngSwitchDefault>
+    <app-text [(value)]="value" (outputEvents)="value = $event"></app-text>
+  </span>
+</div>

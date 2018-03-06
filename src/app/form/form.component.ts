@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, PipeTransform, Pipe, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-form',
@@ -7,7 +7,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 @Input() data:any;
-  constructor() { }
+@Input() fields:any;
+@Output() public outputEvents = new EventEmitter<number>();
+
+  constructor() {
+    this.outputEvents.emit(this.data);
+   }
 
   ngOnInit() {
   }
