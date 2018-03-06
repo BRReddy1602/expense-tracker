@@ -1,4 +1,10 @@
 
+.container{
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 0px;
+    border-radius: 3px;
+}
 h1{
     background: skyblue;
     color: white;
@@ -35,20 +41,13 @@ h1{
  
 .scrollbar
 {
-	height: 450px;
+	height: 500px;
     background: #F5F5F5;
     overflow-y: scroll;
     overflow-x: hidden;
 }
 
-.force-overflow
-{
-	min-height: 450px;
-}
-
 #wrapper
 {
 	text-align: center;
-	width: 500px;
-	margin: auto;
 }

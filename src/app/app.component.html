@@ -1,33 +1,36 @@
-<div class="wrapper" id="wrapper">
-  <div class="scrollbar container" id="style-1">
-    <div style="text-align:center">
-      <h1>
-        Welcome to {{ title }}!
-      </h1>
-    </div>
-    <ul class="nav nav-pills nav-justified">
-      <li class="active">
-        <a href="#1" data-toggle="tab">Add New Expenses</a>
-      </li>
-      <li>
-        <a href="#2" data-toggle="tab">Track Expense</a>
-      </li>
-      <li>
-        <a href="#3" data-toggle="tab">Income details</a>
-      </li>
-    </ul>
+<div class="container">
+  <div style="text-align:center">
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+  </div>
+  <ul class="nav nav-pills nav-justified">
+    <li class="active">
+      <a href="#1" data-toggle="tab">Add New Expenses</a>
+    </li>
+    <li>
+      <a href="#2" data-toggle="tab">Track Expense</a>
+    </li>
+    <li>
+      <a href="#3" data-toggle="tab">Income details</a>
+    </li>
+  </ul>
+  <div class="wrapper" id="wrapper">
+    <div class="scrollbar" id="style-1">
 
-    <div class="tab-content ">
-      <div class="tab-pane active" id="1">
-        <h3>Form to enter details of expense</h3>
+
+      <div class="tab-content ">
+        <div class="tab-pane active" id="1">
+          <h3>Form to enter details of expense</h3>
+        </div>
+        <div class="tab-pane" id="2">
+          <h3>Track expenses based on items category,month,year</h3>
+        </div>
+        <div class="tab-pane" id="3">
+          <h3>Form to add income details</h3>
+        </div>
       </div>
-      <div class="tab-pane" id="2">
-        <h3>Track expenses based on items category,month,year</h3>
-      </div>
-      <div class="tab-pane" id="3">
-        <h3>Form to add income details</h3>
-      </div>
+      <div class="force-overflow"></div>
     </div>
-    <div class="force-overflow"></div>
   </div>
 </div>
