@@ -11,7 +11,7 @@ export class AppComponent {
     name: 'Name Of Product',
     price: 100,
     quantity: 2,
-    category: 'grocery',
+    category: 'Grocery',
     date: '06/03/2018',
     image: '3'
   }];
@@ -34,7 +34,8 @@ export class AppComponent {
     {
       field: 'category',
       description: 'Category',
-      element: 'dropdown'
+      element: 'dropdown',
+      options: ['Grocery','Petrol','Medical','Vegetables','Fruits','Rent','EMI','Chits','Electricity Bill','Shopping','Resturant','Others']
     },
     {
       field: 'date',

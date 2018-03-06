@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { isNumber } from 'util';
 
 @Component({
   selector: 'app-value',
@@ -13,7 +14,9 @@ export class ValueComponent implements OnInit {
   ngOnInit() {
   }
 
-  public valueChange(e, val){
+  public valueChange(val){
+    if(!this.value || this.value < 0 || !isNumber(this.value) || this.value===null)
+      val = this.value = 0;
     this.outputEvents.emit(this.value);
   }
 }

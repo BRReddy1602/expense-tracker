@@ -6,14 +6,15 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./form-element.component.css']
 })
 export class FormElementComponent implements OnInit {
-  @Input() value:number;
+  @Input() value:any;
   @Input() field:any;
-  @Output() public outputEvents = new EventEmitter<number>();
-    constructor() { }
+  @Output() public outputEvent = new EventEmitter<any>();
+    constructor() {
+     }
     ngOnInit() {
     }
-  
-    public valueChange(e, val){
-      this.outputEvents.emit(this.value);
+    public onValueChange(val) {
+      this.value = val;
+      this.outputEvent.emit(this.value);
     }
 }

@@ -1,13 +1,3 @@
-<!-- <div *ngFor="let field of fields">
-  <div class="row" [ngIf]="!field.hide">
-    <div class="col-xs-3">
-      <app-label [label]="field.description"></app-label>
-    </div>
-    <div class="col-xs-3">
-      <app-value [(value)]="data.field" (outputEvents)="data.field = $event"></app-value>
-    </div>
-  </div>
-</div> -->
 <div class="row">
   <ng-template ngFor let-field [ngForOf]="fields" let-i="index">
     <div class='inline-block col-xs-6' *ngIf="!field.hide">
@@ -15,11 +5,11 @@
         <app-label [label]="field.description"></app-label>
       </div>
       <div class="col-xs-6">
-        <app-form-element [(value)]="data[field.field]" [field]="field" (outputEvents)="data[field.field] = $event">
+        <app-form-element [(value)]="data[field.field]" [field]="field" (outputEvent)="data[field.field] = $event">
         </app-form-element>
       </div>
     </div>
   </ng-template>
 </div>
 
-<pre><h6>Form level</h6>{{data | json}}</pre>
+<!-- <pre><h6>Form level</h6>{{data | json}}</pre> -->

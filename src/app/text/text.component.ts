@@ -6,8 +6,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./text.component.css']
 })
 export class TextComponent implements OnInit {
-  @Input() value:number;
-  @Output() public outputEvents = new EventEmitter<number>();
+  @Input() value:any;
+  @Output() public outputEvents = new EventEmitter<any>();
     constructor() { }
     ngOnInit() {
     }
