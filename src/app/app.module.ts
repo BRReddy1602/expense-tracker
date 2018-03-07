@@ -10,6 +10,7 @@ import { TextComponent } from './text/text.component';
 import { DateComponent } from './date/date.component';
 import { FormElementComponent } from './form-element/form-element.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
+import { AddExpenseComponent } from './add-expense/add-expense.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     TextComponent,
     DateComponent,
     FormElementComponent,
-    DropdownComponent
+    DropdownComponent,
+    AddExpenseComponent
   ],
   imports: [
     BrowserModule,

@@ -5,7 +5,7 @@
         <app-label [label]="field.description"></app-label>
       </div>
       <div class="col-xs-6">
-        <app-form-element [(value)]="data[field.field]" [field]="field" (outputEvent)="data[field.field] = $event">
+        <app-form-element [(value)]="data[field.field]" [field]="field" (outputEvent)="onValueChange($event);data[field.field] = $event">
         </app-form-element>
       </div>
     </div>

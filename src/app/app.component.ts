@@ -24,18 +24,18 @@ export class AppComponent {
     {
       field: 'price',
       description: 'Price',
-      element:'number'
+      element: 'number'
     },
     {
       field: 'quantity',
       description: 'Quantity',
-      element:'number'
+      element: 'number'
     },
     {
       field: 'category',
       description: 'Category',
       element: 'dropdown',
-      options: ['Grocery','Petrol','Medical','Vegetables','Fruits','Rent','EMI','Chits','Electricity Bill','Shopping','Resturant','Others']
+      options: ['Grocery', 'Petrol', 'Medical', 'Vegetables', 'Fruits', 'Rent', 'EMI', 'Chits', 'Electricity Bill', 'Shopping', 'Resturant', 'Others']
     },
     {
       field: 'date',
@@ -49,4 +49,9 @@ export class AppComponent {
       hide: true
     }
   ];
+
+  public addNewExpense(newExpense) {
+    debugger;
+    console.log(newExpense);
+  }
 }

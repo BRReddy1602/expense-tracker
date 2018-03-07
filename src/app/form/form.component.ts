@@ -16,5 +16,7 @@ export class FormComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  public onValueChange(val) {
+    this.outputEvents.emit(this.data);
+  }
 }
