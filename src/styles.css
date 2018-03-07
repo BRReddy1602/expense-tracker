@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+.ngx-datepicker-calendar-container{
+    width: 235px;
+    height: 300px;
+}
+.no-padding{
+    padding:0px;
+}
+

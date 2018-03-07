@@ -1,0 +1,8 @@
+.ngx-datepicker-calendar-container{
+    width: 235px;
+    height: 300px;
+}
+.date-picker .ngx-datepicker-container{
+    border-radius:5px;
+    border:1px solid black;
+}

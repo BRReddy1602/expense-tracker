@@ -51,7 +51,6 @@ export class AppComponent {
   ];
 
   public addNewExpense(newExpense) {
-    debugger;
     console.log(newExpense);
   }
 }

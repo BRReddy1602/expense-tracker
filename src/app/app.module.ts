@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { NgDatepickerModule } from 'ng2-datepicker';
 
 import { AppComponent } from './app.component';
 import { LabelComponent } from './label/label.component';
@@ -27,7 +28,8 @@ import { AddExpenseComponent } from './add-expense/add-expense.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    NgDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent],
