@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -50,7 +51,27 @@ export class AppComponent {
     }
   ];
 
-  public addNewExpense(newExpense) {
+  public addsNewExpense(newExpense) {
     console.log(newExpense);
+    this.httpClient.get('https://my-json-server.typicode.com/BRReddy1602/expense-tracker-db/profiles')
+    .subscribe(
+      (data:any[]) => {
+        if(data.length) {
+          debugger;
+        }
+      }
+    )
+  }
+
+  constructor(private httpClient:HttpClient){  }
+
+  addNewExpense(newExpense){
+    this.httpClient.post(`https://my-json-server.typicode.com/BRReddy1602/expense-tracker-db/profiles`,
+    newExpense)
+    .subscribe(
+      (data:any) => {
+        console.log(data);
+      }
+    )
   }
 }

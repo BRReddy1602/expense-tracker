@@ -1,6 +1,6 @@
 <app-form [data]='data' (outputEvents)="data = $event" [fields]='fields' (outputEvents)="data = $event">
 </app-form>
 <div class="col-sm-12">
-  <button class="pull-right btn btn-primary" (click)="onValueChange()">Add New</button>
+  <button class="pull-right btn btn-primary" (click)="addNewExpense($event)">Add New</button>
 </div>
 <!-- <pre><h6>add Expense level</h6>{{data | json}}</pre> -->
